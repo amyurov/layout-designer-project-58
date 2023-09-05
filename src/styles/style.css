@@ -40,7 +40,7 @@ body {
 }
 
 
-h1,h2,h3 {
+h1, h2, h3 {
     font-family: "Neucha", cursive;
     font-weight: normal;
 
@@ -56,31 +56,6 @@ p {
     margin-top: 0;
 }
 
-.header::before {
-    position: absolute;
-    content: "";
-    display: block;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--White-50);
-    background-image: url("../assets/images/background.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    opacity: 0.1;
-
-    z-index: -1;
-}
-
-.header-container {
-    position: relative;
-}
-
-.header-container > h1 {
-    margin-bottom: 185px;
-}
-
 .container {
     max-width: 1110px;
     width: 100%;
@@ -88,16 +63,65 @@ p {
     padding: 100px 0;
 }
 
-.video-section > h1 {
-    text-align: center;
+.header {
+    position: relative;
 }
 
-.title-img {
+.main-bck::before {
     position: absolute;
+    content: "";
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 
-    height: 525px;
+    background-image: url("../assets/images/background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.1;
+}
+
+.main-bck {
+    background-color: #F5F4F0;
+}
+
+.header-container {
+    position: relative;
+}
+
+.header-title {
+    position: relative;
+    margin-bottom: 185px;
+    z-index: 1;
+}
+
+.header-title-img {
+    position: absolute;
     top: 55px;
     right: -270px;
+
+    height: 525px;
+}
+
+
+.video-container {
+    text-align: center;
+    position: relative;
+
+}
+
+.video-title {
+    display: block;
+    margin-bottom: 399px;
+}
+
+.video {
+    position: absolute;
+    bottom: -100px;
+    left: 95px;
+
+    filter: drop-shadow(0 16px 32px rgba(0 0 0 / 15%));
 }
 
 .description {
@@ -110,51 +134,32 @@ p {
 }
 
 .btn {
-    margin-top: 34px;
     display: inline-block;
-    border: none;
-
     padding: 12px 24px;
-    font-family: OpenSans,sans-serif;
-    font-weight: bold;
+    color: white;
+
+    font-weight: 700;
     text-decoration: none;
     text-transform: uppercase;
-
-    color: var(--White);
-}
-
-.btn:hover {
-    background-color: var(--Primary-hover);
-
 }
 
 .bg-orange {
-    background-color: var(--Primary);
+    background-color: #FE8A02;
 }
 
 .color-primary {
     color: var(--Primary);
 }
 
-
-.flex-column {
-    position: relative;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    height: 629px;
+.mgb-40 {
+    margin-bottom: 40px;
 }
 
-.flex-column > h1:nth-child(2) {
-    margin-bottom: 30px;
+.mgb-30 {
+    margin-bottom: 40px;
 }
 
-.video {
-    position: absolute;
-    bottom: -100px;
-}
+
 
 
 
