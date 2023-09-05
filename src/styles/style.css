@@ -42,7 +42,7 @@ body {
 
 h1, h2, h3 {
     font-family: "Neucha", cursive;
-    font-weight: normal;
+    font-weight: 400;
 
     line-height: 1.2em;
     margin: 0;
@@ -64,17 +64,35 @@ p {
 }
 
 .container {
+    position: relative;
+
     max-width: 1110px;
     width: 100%;
     margin: 0 auto;
     padding: 100px 0;
 }
 
-.header {
-    position: relative;
+.bg-light {
+    background-color: var(--Light);
+    color: var(--Dark);
 }
 
-.main-bck::before {
+.bg-dark {
+    background-color: var(--Brown);
+    color: var(--White);
+}
+
+.bg-white {
+    background-color: var(--White);
+    color: var(--Brown);
+}
+
+.main-bg {
+    position: relative;
+    z-index: -1;
+}
+
+.main-bg::before {
     position: absolute;
     content: "";
     display: block;
@@ -89,13 +107,9 @@ p {
     opacity: 0.1;
 }
 
-.main-bck {
-    background-color: #F5F4F0;
-}
-
-.header-container {
-    position: relative;
-}
+/*.header-container {*/
+/*    position: relative;*/
+/*}*/
 
 .header-title {
     position: relative;
@@ -132,6 +146,7 @@ p {
 }
 
 #navigate {
+    padding-top: 100px;
     background-color: var(--Dark);
 }
 
@@ -142,12 +157,12 @@ p {
 
     list-style: none;
     padding: 0;
+    margin: 0;
     color: var(--Primary-Dark);
 }
 
 .nav-card {
     width: 350px;
-    margin-bottom: 20px;
 }
 
 .nav-card-title {
@@ -155,6 +170,8 @@ p {
     font-family: Neucha, cursive;
     font-size: 52px;
     line-height: 1.2;
+
+    margin-bottom: 20px;
 }
 
 .nav-card-ref {
@@ -176,6 +193,7 @@ p {
 
 .ref-num {
     font-size: 60px;
+    line-height: 1;
     margin-bottom: 40px;
 }
 
@@ -186,6 +204,55 @@ p {
 
 
 
+.bias-header {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    margin-bottom: 100px;
+}
+
+
+
+.bias-header-title {
+    font-family: Neucha, cursive;
+    line-height: 1.2;
+
+}
+
+.title-24 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.bias-title {
+    margin-bottom: 30px;
+}
+
+.bias-subtitle {
+    font-size: 34px;
+}
+
+.description-title {
+    font-family: OpenSans, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    padding: 5px 10px;
+    margin-bottom: 20px;
+}
+
+.unordered {
+    order: 1;
+}
+
+.bg-brown {
+    background-color: var(--Brown);
+}
+
+.bg-orange {
+    background-color: var(--Primary);
+}
 
 .description {
     column-count: 2;
@@ -194,6 +261,26 @@ p {
 
 .description > p:nth-child(2) {
     break-before: column;
+}
+
+.description > p:last-child {
+    margin-bottom: 0;
+}
+
+.white-50 {
+    color: var(--White-50);
+}
+
+.dark-50 {
+    color: var(--Dark-50);
+}
+
+.color-white {
+    color: var(--White);
+}
+
+.color-primary {
+    color: var(--Primary);
 }
 
 .btn {
@@ -206,20 +293,19 @@ p {
     text-transform: uppercase;
 }
 
-.bg-orange {
-    background-color: #FE8A02;
+.btn:hover {
+    background-color: var(--Primary-hover);
 }
-
-.color-primary {
-    color: var(--Primary);
-}
-
 .mgb-40 {
     margin-bottom: 40px;
 }
 
+.mgl-30 {
+    margin-left: 30px;
+}
+
 .mgb-30 {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
 
